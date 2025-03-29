@@ -59,4 +59,3 @@ C:\laragon\www\asp\DoanNgocThuong_2122110111\DoanNgocThuong_2122110111\obj\Debug
 C:\laragon\www\asp\DoanNgocThuong_2122110111\DoanNgocThuong_2122110111\obj\Debug\net5.0\DoanNgocThuong_2122110111.pdb
 C:\laragon\www\asp\DoanNgocThuong_2122110111\DoanNgocThuong_2122110111\obj\Debug\net5.0\DoanNgocThuong_2122110111.genruntimeconfig.cache
 C:\laragon\www\asp\DoanNgocThuong_2122110111\DoanNgocThuong_2122110111\obj\Debug\net5.0\DoanNgocThuong_2122110111.csproj.AssemblyReference.cache
-C:\laragon\www\asp\DoanNgocThuong_2122110111\DoanNgocThuong_2122110111\obj\Debug\net5.0\DoanNgocThuong_2122110111.sourcelink.json

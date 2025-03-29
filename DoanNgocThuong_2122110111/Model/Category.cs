@@ -6,11 +6,10 @@ using System.ComponentModel.DataAnnotations;
 
 public class Category
 {
+    [Key]  // Định nghĩa khóa chính
     public int Id { get; set; }
-    public string? Name { get; set; } // Tên danh mục
-    public string? Description { get; set; } // Mô tả danh mục
 
-    // Quan hệ 1-N với Product
-    public List<Product> Products { get; set; } = new List<Product>();
+    [Required]  // Đảm bảo trường Name không được để trống
+    public string Name { get; set; }
 }
 

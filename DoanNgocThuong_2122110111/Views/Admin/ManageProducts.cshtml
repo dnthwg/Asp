@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Manage Products</h2>
+<button class="btn btn-primary" onclick="showAddProductForm()">Add Product</button>
+<table id="productTable" border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Dữ liệu sản phẩm sẽ được hiển thị ở đây -->
+    </tbody>
+</table>
+<div id="addProductContainer"></div>
+<div id="editProductContainer"></div>
+<script src="/js/adminManageProducts.js"></script>
+<link rel="stylesheet" href="/css/admin.css">

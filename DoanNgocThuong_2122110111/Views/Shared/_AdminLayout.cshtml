@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="~/wwwroot/css/admin.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/Admin/Dashboard">Dashboard</a></li>
+            <li><a href="/Admin/ManageUsers">Manage Users</a></li>
+            <li><a href="/Admin/ManageProducts">Manage Products</a></li>
+            <li><a href="/Admin/ManageCategories">Manage Categories</a></li>
+            <li><a href="/Admin/ManageOrders">Manage Orders</a></li>
+        </ul>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <p>&copy; 2025 Admin Panel</p>
+    </footer>
+</body>
+</html>

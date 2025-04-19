@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Manage Users</h2>
+<table id="userTable" border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Dữ liệu người dùng sẽ được hiển thị ở đây -->
+    </tbody>
+</table>
+<div id="addUserContainer"></div>
+<div id="editContainer"></div>
+<script src="/js/adminManageUsers.js"></script>
+<link rel="stylesheet" href="/css/admin.css">

@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
-public class Category
+namespace DoanNgocThuong_2122110111.Model
 {
-    [Key]  // Định nghĩa khóa chính
-    public int Id { get; set; }
+    public class Category
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string? Description { get; set; }
 
-    [Required]  // Đảm bảo trường Name không được để trống
-    public string Name { get; set; }
+        // Thuộc tính điều hướng để liên kết với Product
+        public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+
+        public DateTime? CreatedDate { get; set; }
+        public string? CreatedBy { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public string? UpdatedBy { get; set; }
+        public DateTime? DeletedDate { get; set; }
+        public string? DeletedBy { get; set; }
+    }
 }
-

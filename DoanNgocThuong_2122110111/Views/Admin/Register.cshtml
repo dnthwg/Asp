@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null; // Không sử dụng layout chung
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .register-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+            .register-container h2 {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .register-container input, .register-container select {
+                width: 100%;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            .register-container button {
+                width: 100%;
+                padding: 0.5rem;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                .register-container button:hover {
+                    background-color: #0056b3;
+                }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="text" id="fullName" placeholder="Full Name">
+            <select id="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+        <p id="errorMessage" style="color: red; text-align: center; display: none;">Error occurred during registration</p>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const username = document.getElementById('Username').value;
+            const email = document.getElementById('Email').value;
+            const password = document.getElementById('Password').value;
+            const fullName = document.getElementById('FullName').value;
+            const role = document.getElementById('Role').value;
+
+            const response = await fetch('/User/Register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, email, password, fullName, role })
+            });
+
+            if (response.ok) {
+                alert('Registration successful!');
+                window.location.href = '/Admin/Login'; // Chuyển hướng đến trang đăng nhập
+            } else {
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
